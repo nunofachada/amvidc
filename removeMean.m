@@ -1,12 +1,16 @@
+function data_norm = removeMean(data)
+% REMOVEMEAN Removes matrix mean vector from each row.
 %
-% removeMean function - Removes matrix mean vector from each row
+% data_norm = REMOVEMEAN(data)
 %
 % Parameters:
 %       data - data from which to remove mean from each row
 % Output:
 %  data_norm - data with mean removed from each row
 %
-function data_norm = removeMean(data)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Get mean
 meanVector = mean(data);

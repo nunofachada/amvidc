@@ -1,7 +1,8 @@
+function eval = fscore(idx, numclasses, numclassmembers)
+% FSCORE Evaluate clustering result by comparing it with correct result. 
+% Assumes that correct result has observations of same class in sequence.
 %
-% fscore function - Evaluate clustering result by comparing it with 
-% correct result. Assumes that correct result has observations of same 
-% class in sequence.
+% eval = FSCORE(idx, numclasses, numclassmembers)
 %
 % Parameters:
 %              idx - Clustering result (e.g. such as given by kmeans)
@@ -11,7 +12,9 @@
 % Output:
 %             eval - clustering fscore of idx for given classes
 %
-function eval = fscore(idx, numclasses, numclassmembers)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % If numclassmembers is a scalar, transform it in a vector
 if max(size(numclassmembers)) == 1

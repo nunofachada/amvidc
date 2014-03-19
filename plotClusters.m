@@ -1,9 +1,11 @@
+function handle = plotClusters(data, dims, idx_marker, idx_encircle, groupType, handle)
+% PLOTCLUSTERS Plot a set of clusters with different markers and with 
+% different encircle areas for points of different clusters. This function 
+% accepts idxs returned by kmeans function and such, or an array of size 
+% equal to the number of clusters, where each value is the number of points 
+% in each cluster (thus, data will be ordered by clusters).
 %
-% plotClusters function - Plot a set of clusters with different markers
-% and with different encircle areas for points of different clusters. This
-% function accepts idxs returned by kmeans function and such, or an array
-% of size equal to the number of clusters, where each value is the number
-% of points in each cluster (thus, data will be ordered by clusters).
+% handle = PLOTCLUSTERS(data, dims, idx_marker, idx_encircle, groupType, handle)
 %
 % Parameters:
 %           data - m x n, with m samples and n dimensions
@@ -17,7 +19,9 @@
 % Output:
 %      handle - plot figure handle
 %
-function handle = plotClusters(data, dims, idx_marker, idx_encircle, groupType, handle)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Parse optional parameters
 if nargin < 4, idx_encircle = idx_marker; end;

@@ -1,6 +1,8 @@
+function wd = weightedDirection(vectors, weights)
+% WEIGHTEDDIRECTION Return a weighted direction given several vectors and 
+% correspondent weights.
 %
-% weightedDirection function - Return a weighted direction given several
-% vectors and correspondent weights.
+% wd = WEIGHTEDDIRECTION(vectors, weights)
 %
 % Parameters:
 %     vectors - m x n, m dimensions, n vectors (normalized)
@@ -8,7 +10,9 @@
 % Output:
 %          wd - m x 1, normalized weighted direction
 %
-function wd = weightedDirection(vectors, weights)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Determine number of dimensions
 numDims = size(vectors, 1);

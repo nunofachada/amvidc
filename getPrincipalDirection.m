@@ -1,6 +1,8 @@
+function direction = getPrincipalDirection(data, idx, numClusts, method)
+% GETPRINCIPALDIRECTION Return the principal direction of the given data, 
+% possibly differentiating and weighting different clusters.
 %
-% getPrincipalDirection function - Return the principal direction of the
-% given data, possibly differentiating and weighting different clusters.
+% direction = GETPRINCIPALDIRECTION(data, idx, numClusts, method)
 %
 % Parameters:
 %        data - m x n, m samples, n dimensions
@@ -12,7 +14,9 @@
 % Output:
 %   direction - n x 1, normalized cluster-weighted principal direction
 %
-function direction = getPrincipalDirection(data, idx, numClusts, method)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Pre-alocate space for global direction data
 globalDirectionVectors = zeros(size(data, 2), numClusts);

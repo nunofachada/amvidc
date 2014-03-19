@@ -1,5 +1,7 @@
+function delta = angleDiff(v1, v2)
+% ANGLEDIFF Determine smallest angle between two directions.
 %
-% angleDiff function - determine smallest angle between two directions
+% ANGLEDIFF(v1, v2)
 %
 % Parameters:
 %       v1 - n x 1, vector representing first direction
@@ -7,7 +9,9 @@
 % Output:
 %    delta - angle in radians between first and second directions
 %
-function delta = angleDiff(v1, v2)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Determine number of dimensions
 numDims = size(v1, 1);

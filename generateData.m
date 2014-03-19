@@ -9,9 +9,13 @@ function [data clustPoints idx centers slopes lengths] = generateData( ...
     lateralStd, ...
     totalPoints ...
     )
-% generateData Generates 2D data for clustering; data is created along 
+% GENERATEDATA Generates 2D data for clustering; data is created along 
 %              straight lines, which can be more or less parallel depending
 %              on slopeStd argument.
+%
+% [data clustPoints idx centers slopes lengths] = 
+%    GENERATEDATA(slope, slopeStd, numClusts, xClustAvgSep, yClustAvgSep, ...
+%                 lengthAvg, lengthStd, lateralStd, totalPoints)
 %
 % Inputs:
 %        slope - Base direction of the lines on which clusters are based.
@@ -50,7 +54,7 @@ function [data clustPoints idx centers slopes lengths] = generateData( ...
 % ----------------------------------------------------------
 % Usage example:
 %
-%   [data cp idx] = generateData(1, 0.5, 5, 15, 15, 5, 1, 2, 200);
+%   [data cp idx] = GENERATEDATA(1, 0.5, 5, 15, 15, 5, 1, 2, 200);
 %
 % This creates 5 clusters with a total of 200 points, with a base slope 
 % of 1 (std=0.5), separated in average by 15 units in both x and y 
@@ -60,12 +64,9 @@ function [data clustPoints idx centers slopes lengths] = generateData( ...
 % To take a quick look at the clusters just do:
 %
 %   scatter(data(:,1), data(:,2), 8, idx);
-% ----------------------------------------------------------
-%
+
 %  N. Fachada
-%  Instituto Superior Técnico
-%  Aug 10, 2010
-%  Updated: Aug 2, 2012
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Make sure totalPoints >= numClusts
 if totalPoints < numClusts

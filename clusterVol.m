@@ -1,9 +1,11 @@
-% 
-% clusterVol function - Determine the volume of the cluster formed by the
+function volCluster = clusterVol(points, type, zeroVolValue, tol)
+% CLUSTERVOL Determine the volume of the cluster formed by the
 % given set of points. The volume is determined using the convex hull
 % formed by the cluster, of the minimum volume ellipsoid (mve) formed by 
 % the cluster.
 % 
+% volCluster = CLUSTERVOL(points, type, zeroVolValue, tol)
+%
 % Parameters:
 %       points - m x n, with m samples and n dimensions
 %         type - 'ellipsoid' or 'convhull'
@@ -13,7 +15,9 @@
 % Output:
 %  volCluster - Volume of the cluster formed by the given set of points.
 %
-function volCluster = clusterVol(points, type, zeroVolValue, tol)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % How many points are in cluster
 sizeCluster = size(points, 1);

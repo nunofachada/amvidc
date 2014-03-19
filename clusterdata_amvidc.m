@@ -1,7 +1,15 @@
+function [idx idx_all vol_all dir_all diss_all min_all] = clusterdata_amvidc( ...
+    data, ...
+    k, ...
+    idx, ...
+    varargin ...
+    )
+% CLUSTERDATA_AMVIDC Perform agglomerative hierarchical clustering (AHC) 
+% using Minimum Volume Increase (MVI) and Minimum Direction Change (MDC) 
+% criteria.
 %
-% clusterdata_amvidc function - Perform agglomerative hierarchical 
-% clustering (AHC) using Minimum Volume Increase (MVI) and Minimum 
-% Direction Change (MDC) criteria.
+% [idx idx_all vol_all dir_all diss_all min_all] = 
+%   CLUSTERDATA_AMVIDC(data, k, idx, varargin)
 %
 % Parameters:
 %        data - m x n, with m samples and n dimensions
@@ -29,12 +37,9 @@
 %    diss_all - dissimilarity matrix (vol + dir changes) in each step of AHC
 %     min_all - minimum change (MVI+MDC) in each step of AHC
 %
-function [idx idx_all vol_all dir_all diss_all min_all] = clusterdata_amvidc( ...
-    data, ...
-    k, ...
-    idx, ...
-    varargin ...
-    )
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Set global logging level structure
 global loglevels;

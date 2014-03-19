@@ -1,7 +1,9 @@
+function idx = pddp(data, maxClusts, minPoints, debug)
+% PDDP Perform P.D.D.P. (principal direction divisive clustering) on input 
+% data.
 % 
-% pddp function - Perform PDDP (principal direction divisive clustering)
-%                 on input data.
-% 
+% idx = PDDP(data, maxClusts, minPoints, debug)
+%
 % Parameters:
 %       data -  m x n, with m samples and n dimensions
 %  maxClusts - maximum number of clusters to form (optional, default is inf)
@@ -11,7 +13,9 @@
 % Output:
 %         idx - final clustering result
 %
-function idx = pddp(data, maxClusts, minPoints, debug)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Check if maximum number of clusters is given as argument
 if nargin < 2, maxClusts = inf; end;

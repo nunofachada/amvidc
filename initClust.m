@@ -1,8 +1,9 @@
+function idx = initClust(data, minClustSize, distance, numex)
+% INITCLUST Performs very simple initial clustering based on AHC with 
+% single linkage (nearest neighbor) and user defined distance. Each sample 
+% is associated with the same cluster of its nearest point.
 %
-% initClust function - Performs very simple initial clustering based on
-%                      AHC with single linkage (nearest neighbor) and
-%                      user defined distance. Each sample is associated 
-%                      with the same cluster of its nearest point.
+% idx = INITCLUST(data, minClustSize, distance, numex)
 %
 % Parameters:
 %            data - data to cluster
@@ -14,7 +15,9 @@
 % Output:
 %             idx - clustering result
 %
-function idx = initClust(data, minClustSize, distance, numex)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 % Default distance
 if nargin < 3, distance = 'seuclidean'; end;

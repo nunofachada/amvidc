@@ -1,13 +1,17 @@
+function normalizedIdx = idxNormalize(idx)
+% IDXNORMALIZE Reshifts idx cluster id's to be within 1 and the total 
+% number of clusters.
 %
-% idxNormalize function - Reshifts idx cluster id's to be within 1 and
-%                         the total number of clusters.
+% normalizedIdx = IDXNORMALIZE(idx)
 %
 % Parameters:
 %            idx - typical idx clustering result
 % Output:
 %  normalizedIdx - normalized idx clustering result
 %
-function normalizedIdx = idxNormalize(idx)
+
+%  N. Fachada
+%  Instituto Superior Técnico, Lisboa, Portugal
 
 idxUniques = [unique(idx) zeros(size(unique(idx), 1) ,1)];
 normalizedIdx = zeros(size(idx, 1), 1);
