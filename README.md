@@ -50,15 +50,15 @@ requirement for MVI. `clusterdata_amvidc` function has many optional
 parameters, with reasonable defaults, as specified in the following
 table:
 
-  Parameter     Default                  Options/Description
-  ------------- ------------------------ -------------------------------------------------------------------------------------------------------
-  *volume*      ‘convhull’               Volume type: ‘ellipsoid’ or ‘convhull’
-  *tol*         0.01                     Tolerance for minimum volume ellipse calculation (‘ellipsoid’ volume only)
-  *dirweight*   0                        Direction weight in last iteration (0 means MDC linkage is ignored)
-  *dirpower*    *dirweight* \> 0         Convergence power to dirweight (higher values make convergence steeper and occurring more to the end)
-  *dirtype*     ‘svd’                    Direction type: ‘pca’, ‘svd’
-  *nvi*         true                     Allow negative volume increase?
-  *loglevel*    3 (show warnings only)   Log level: 0 (show all messages) to 4 (only show critical errors), default is 3 (show warnings)
+  Parameter    | Default                |  Options/Description
+  ------------ | ---------------------- | ------------------------------------------------------------------------------------------------------
+  *volume*     | ‘convhull’             |  Volume type: ‘ellipsoid’ or ‘convhull’
+  *tol*        | 0.01                   |  Tolerance for minimum volume ellipse calculation (‘ellipsoid’ volume only)
+  *dirweight*  | 0                      |  Direction weight in last iteration (0 means MDC linkage is ignored)
+  *dirpower*   | *dirweight* \> 0       |  Convergence power to dirweight (higher values make convergence steeper and occurring more to the end)
+  *dirtype*    | ‘svd’                  |  Direction type: ‘pca’, ‘svd’
+  *nvi*        | true                   |  Allow negative volume increase?
+  *loglevel*   | 3 (show warnings only) |  Log level: 0 (show all messages) to 4 (only show critical errors), default is 3 (show warnings)
 
 For example, to perform clustering using ellipsoid volume taking into
 account direction change, where cluster direction is determined using
