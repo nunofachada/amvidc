@@ -25,6 +25,5 @@ end;
 % represent)
 cosDelta = dot(v1, v2) / (norm(v1) * norm(v2));
 delta = acos(cosDelta);
-%delta = 1 - cosDelta;
 
 end

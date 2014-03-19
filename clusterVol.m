@@ -19,8 +19,6 @@ function volCluster = clusterVol(points, type, zeroVolValue, tol)
 sizeCluster = size(points, 1);
 % How many dimensions are at stake
 numDims = size(points, 2);
-% Add path to external functions
-%addpath('external/');
 
 % Check if there are enough points to calculate a volume
 if sizeCluster < numDims + 1
