@@ -25,15 +25,15 @@ Generating data
 
 AMVIDC was inspired on the differentiation of spectrometric data. 
 However, to further validate the clustering algorithms, synthetic
-data sets can be generated with the `generateData` function. This 
-function generates data in the *m* x *n* format, with *m* samples 
-(points) and *n* dimensions (variables) according to a set of 
-parameters, which are explained in the source code.
+data sets can be generated with the [generateData](generateData.m) 
+function. This function generates data in the *m* x *n* format, with 
+*m* samples (points) and *n* dimensions (variables) according to a set 
+of parameters, which are explained in the source code.
 
 Running the algorithm
 =====================
 
-AMVIDC is implemented in the `clusterdata_amvidc.m` function:
+AMVIDC is implemented in the `clusterdata_amvidc` function:
 
     idx = clusterdata_amvidc(X, k, idx_init);
 
