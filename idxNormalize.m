@@ -1,6 +1,6 @@
 %
-% normalizedIdx function - Reshifts idx cluster id's to be within 1 and
-%                          the total number of clusters.
+% idxNormalize function - Reshifts idx cluster id's to be within 1 and
+%                         the total number of clusters.
 %
 % Parameters:
 %            idx - typical idx clustering result
