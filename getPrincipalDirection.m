@@ -50,7 +50,7 @@ for i=1:numClusts
         elseif strcmp(method, 'pca')
 
             % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-            % Use SVD: eigenvalues are taken directly from the data matrix  %
+            % Use PCA: eigenvalues are taken from the covariance matrix     %
             % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
             % Perform PCA
