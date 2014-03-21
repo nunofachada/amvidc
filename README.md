@@ -162,11 +162,12 @@ ans =
 ```
 
 Visual observation can be accomplished with the [plotClusters](plotClusters.m) 
-function. First, we will perform [PCA](http://en.wikipedia.org/wiki/Principal_component_analysis)
-on the data, which performs a transformation such that the we obtain its 
-two principal components (i.e., the components which have the largest possible 
-variance). These components are useful when plotting in 2D (even though 
-k-Means was performed on the four dimensions of the data). 
+function. First, [PCA](http://en.wikipedia.org/wiki/Principal_component_analysis)
+is applied on the data, yielding its principal components (i.e., the 
+components which have the largest possible variance). The first two 
+components (the two directions of highest variance) are useful for 
+visually discriminating the data in 2D, even though k-Means was 
+performed on the four dimensions of the data). 
 
     >> [~, iris_pca] = princomp(meas);
 
@@ -181,7 +182,7 @@ AMVIDC is a computationally expensive algorithm, so it is preferable to
 apply it on a reduced number of dimensions. The following command applies 
 AMVIDC clustering to the first two principal components of the data set,
 using [pddp](pddp.m) for the initial clustering, ellipsoid volume 
-and direction change minimization:
+minimization and direction change minimization:
 
     >> idx_amvidc = clusterdata_amvidc(iris_pca(:, 1:2), 3, pddp(iris_pca(:, 1:2)), 'dirweight', 0.6, 'dirpower', 8, 'volume', 'ellipsoid');
 
