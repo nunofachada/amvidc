@@ -1,5 +1,6 @@
-User Manual
-===========
+# User Manual
+
+## Introduction
 
 AMVIDC is a data clustering algorithm based on agglomerative 
 hierarchical clustering (AHC) which uses minimum volume increase (MVI) 
@@ -11,8 +12,7 @@ Rosa, "Spectrometric differentiation of yeast strains using Minimum
 Volume Increase and Minimum Direction Change clustering criteria". 
 Pattern Recognition Letters, 2014 (IN PRESS)
 
-Data format
------------
+### Data format
 
 Data for clustering is presented as a set of samples (or points), each 
 with a constant number of dimensions. As such, for the rest of this 
@@ -20,8 +20,7 @@ guide, data matrices are considered to be in the following format:
 
 -   *m* x *n*, with *m* samples (points) and *n* dimensions (variables)
 
-Generating data
----------------
+### Generating data
 
 AMVIDC was inspired on the differentiation of spectrometric data. 
 However, to further validate the clustering algorithms, synthetic
@@ -30,8 +29,7 @@ function. This function generates data in the *m* x *n* format, with
 *m* samples (points) and *n* dimensions (variables) according to a set 
 of parameters, which are explained in the source code.
 
-Running the algorithm
-=====================
+## Running the algorithm
 
 AMVIDC is implemented in the [clusterdata_amvidc](clusterdata_amvidc.m) 
 function:
@@ -78,11 +76,9 @@ used):
     the division of a cluster yields sub-clusters which can have a
     volume.
 
-Analysis of results
-===================
+## Analysis of results
 
-F-score
--------
+### F-score
 
 The [F-score](http://en.wikipedia.org/wiki/F1_score) measure is used 
 to evaluate clustering results. The measure is implemented in the 
@@ -102,8 +98,7 @@ The [fscore](fscore.m) function returns:
 
 -   **eval** - Value between 0 (worst case) and 1 (perfect clustering)
 
-Plotting clusters
------------------
+### Plotting clusters
 
 Visualizing how an algorithm grouped clusters can provide important 
 insight on its effectiveness. Also, it may be important to visually 
