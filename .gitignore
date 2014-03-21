@@ -2,7 +2,6 @@
 .~*#
 .nfs*
 *.mat
-*.png
 *.fig
 *.aux
 *.log
@@ -11,4 +10,5 @@
 *.pdf
 *.gz
 *.ods
+*.eps
 synt/

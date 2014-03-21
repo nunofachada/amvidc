@@ -129,4 +129,77 @@ The [plotClusters](plotClusters.m) function returns:
 
 -   **h_out** - Figure handle of plot
 
+## Example
+
+In this example, we demonstrate how to test AMVIDC using 
+[Fisher's iris data](http://en.wikipedia.org/wiki/Iris_flower_data_set), 
+which is included in the MatLab Statistics Toolbox. We chose this data set
+as it is readily available, not necessarily because AMVIDC is the most
+appropriate algorithm to apply in this case. First, we load the data:
+
+    >> load fisheriris
+
+The data set consists of 150 samples, 50 samples for each of three 
+species of the Iris flower. Four features (variables) were measured per 
+sample. The data itself loads into the `meas` variable, while the
+species to which each sample is associated is given in the `species`
+variable. The samples are ordered by species, so the first 50 samples
+belong to one species, and so on. First, we test the 
+[k-Means](http://en.wikipedia.org/wiki/K-means_clustering) algorithm,
+specifying three clusters, one per species:
+
+    >> idx_km = kmeans(meas, 3);
+
+We can evaluate the performance of k-Means using the [fscore](fscore.m)
+function (the value of 1 being perfect clustering):
+
+```
+>> fscore(idx_km, 3, [50, 50, 50])
+
+ans =
+
+    0.8918
+```
+
+Visual observation can be accomplished with the [plotClusters](plotClusters.m) 
+function. First, we will perform [PCA](http://en.wikipedia.org/wiki/Principal_component_analysis)
+on the data, which performs a transformation such that the we obtain its 
+two principal components (i.e., the components which have the largest possible 
+variance). These components are useful when plotting in 2D (even though 
+k-Means was performed on the four dimensions of the data). 
+
+    >> [~, iris_pca] = princomp(meas);
+
+We can now plot the data:
+
+    >> plotClusters(iris_pca, 2, [50,50,50], idx_km);
+    >> legend(unique(species), 'Location','Best')
+
+![k-Means clustering of the Iris data set](images/kmeans.png "k-Means clustering of the Iris data set")
+
+AMVIDC is a computationally expensive algorithm, so it is preferable to
+apply it on a reduced number of dimensions. The following command applies 
+AMVIDC clustering to the first two principal components of the data set,
+using [pddp](pddp.m) for the initial clustering, ellipsoid volume 
+and direction change minimization:
+
+    >> idx_amvidc = clusterdata_amvidc(iris_pca(:, 1:2), 3, pddp(iris_pca(:, 1:2)), 'dirweight', 0.6, 'dirpower', 8, 'volume', 'ellipsoid');
+
+The [fscore](fscore.m) evaluation is obtained as follows:
+
+```
+>> fscore(idx_iris_a, 3, [50, 50, 50])
+
+ans =
+
+    0.9599
+```
+
+Slightly better than k-Means. Visual inspection also provides a
+good insight on the clustering result:
+
+    >> plotClusters(iris_pca,2,[50,50,50],idx_iris_a,'ellipsoid');
+    >> legend(unique(species), 'Location','Best');
+
+![AMVIDC clustering of the Iris data set](images/amvidc.png "AMVIDC clustering of the Iris data set")
 
