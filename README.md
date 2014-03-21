@@ -142,7 +142,7 @@ appropriate algorithm to apply in this case. First, we load the data:
 The data set consists of 150 samples, 50 samples for each of three 
 species of the Iris flower. Four features (variables) were measured per 
 sample. The data itself loads into the `meas` variable, while the
-species to which each sample is associated is given in the `species`
+species to which each sample is associated with is given in the `species`
 variable. The samples are ordered by species, so the first 50 samples
 belong to one species, and so on. First, we test the 
 [k-Means](http://en.wikipedia.org/wiki/K-means_clustering) algorithm,
@@ -188,7 +188,7 @@ and direction change minimization:
 The [fscore](fscore.m) evaluation is obtained as follows:
 
 ```
->> fscore(idx_iris_a, 3, [50, 50, 50])
+>> fscore(idx_amvidc, 3, [50, 50, 50])
 
 ans =
 
@@ -198,7 +198,7 @@ ans =
 Slightly better than k-Means. Visual inspection also provides a
 good insight on the clustering result:
 
-    >> plotClusters(iris_pca,2,[50,50,50],idx_iris_a,'ellipsoid');
+    >> plotClusters(iris_pca, 2, [50,50,50], idx_amvidc, 'ellipsoid');
     >> legend(unique(species), 'Location','Best');
 
 ![AMVIDC clustering of the Iris data set](images/amvidc.png "AMVIDC clustering of the Iris data set")
