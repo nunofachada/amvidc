@@ -7,10 +7,10 @@ hierarchical clustering (AHC) which uses minimum volume increase (MVI)
 and minimum direction change (MDC) as clustering criteria. The
 algorithm is presented in detail in the following publication:
 
--   Fachada, N., Figueiredo, M.A.T., Lopes, V.V., Martins, R.C., Rosa, A.C., Spectrometric
-differentiation of yeast strains using minimum volume increase and minimum direction change clustering criteria,
+-   Fachada, N., Figueiredo, M.A.T., Lopes, V.V., Martins, R.C., Rosa, 
+A.C., [Spectrometric differentiation of yeast strains using minimum volume 
+increase and minimum direction change clustering criteria](http://www.sciencedirect.com/science/article/pii/S0167865514000889),
 Pattern Recognition Letters (2014), doi: http://dx.doi.org/10.1016/j.patrec.2014.03.008
-(available at http://www.sciencedirect.com/science/article/pii/S0167865514000889)
 
 ### Data format
 
