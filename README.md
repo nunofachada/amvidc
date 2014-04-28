@@ -10,7 +10,7 @@ algorithm is presented in detail in the following publication:
 -   Fachada, N., Figueiredo, M.A.T., Lopes, V.V., Martins, R.C., Rosa, 
 A.C., [Spectrometric differentiation of yeast strains using minimum volume 
 increase and minimum direction change clustering criteria](http://www.sciencedirect.com/science/article/pii/S0167865514000889),
-Pattern Recognition Letters, Vol. 45, pp. 55-61 (2014), doi: http://dx.doi.org/10.1016/j.patrec.2014.03.008
+Pattern Recognition Letters, vol. 45, pp. 55-61 (2014), doi: http://dx.doi.org/10.1016/j.patrec.2014.03.008
 
 ### Data format
 
@@ -24,10 +24,9 @@ guide, data matrices are considered to be in the following format:
 
 AMVIDC was inspired on the differentiation of spectrometric data. 
 However, to further validate the clustering algorithms, synthetic
-data sets can be generated with the [generateData](generateData.m) 
-function. This function generates data in the *m* x *n* format, with 
-*m* samples (points) and *n* dimensions (variables) according to a set 
-of parameters, which are explained in the source code.
+data sets can be generated with [generateData](https://github.com/FakenMC/generateData), 
+which generates data in the *m* x *n* format, with *m* samples (points) and 
+*n* dimensions (variables) according to a set of parameters.
 
 ## Running the algorithm
 
