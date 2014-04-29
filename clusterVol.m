@@ -33,7 +33,7 @@ end;
 % Determine what type of volume to use
 if strcmp(type, 'ellipsoid')
     % Ellipsoid, use MinVolEllipse from Nima Moshtagh
-    [A, ~] = mve.MinVolEllipse(points', tol);
+    [A, ~] = MinVolEllipse(points', tol);
     volCluster = det(inv(A));
 elseif strcmp(type, 'convhull')
     % Convex hull, use matlab native function

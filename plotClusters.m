@@ -105,7 +105,7 @@ if ~strcmp(groupType, 'none')
                 end;
             elseif strcmp(groupType, 'ellipsoid')
                 % Ellipsoid encirclement
-                [A , c] = mve.MinVolEllipse(clusterSamples', 0.01);
+                [A , c] = MinVolEllipse(clusterSamples', 0.01);
                 Ellipse_plot(A, c);
                 %grid on;
             end;
