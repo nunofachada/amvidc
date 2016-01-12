@@ -34,11 +34,10 @@ end;
 if strcmp(type, 'ellipsoid')
     % Ellipsoid, use MinVolEllipse from Nima Moshtagh
     [A, ~] = MinVolEllipse(points', tol);
-    volCluster = det(inv(A));
+    volCluster = ndsvol(numDims, 1) * sqrt(det(inv(A)));
 elseif strcmp(type, 'convhull')
     % Convex hull, use matlab native function
-    [~, volCluster] = convhulln(points,{'QJ','Pp'});
+    [~, volCluster] = convhulln(points, {'QJ','Pp'});
 else
     error('Unknown type of volume.');
 end;
-
